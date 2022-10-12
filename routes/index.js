@@ -3,7 +3,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  const username = req.query.username;
+  console.log(`username: ${username}`);
+  res.render('index');
 });
 
 module.exports = router;
